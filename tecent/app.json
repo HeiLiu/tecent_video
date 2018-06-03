@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/user/user",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/channel/channel",
+    "pages/video/video"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "腾讯视频",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#2f2f2f",
+    "selectedColor": "#e65e44",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "text": "首页",
+        "iconPath": "assets/icon/index.png",
+        "selectedIconPath": "assets/icon/index_sel.png",
+        "pagePath": "pages/index/index"
+      },
+      {
+        "text": "短视频",
+        "iconPath": "assets/icon/fire.png",
+        "selectedIconPath": "assets/icon/fire_sel.png",
+        "pagePath": "pages/video/video"
+      },
+      {
+        "text": "频道",
+        "iconPath": "assets/icon/channel.png",
+        "selectedIconPath": "assets/icon/channel_sel.png",
+        "pagePath": "pages/channel/channel"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "assets/icon/user.png",
+        "selectedIconPath": "assets/icon/user_sel.png"
+      }
+    ]
+  }
+}
