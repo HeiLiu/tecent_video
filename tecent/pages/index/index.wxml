@@ -1,13 +1,34 @@
-<!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+  <!-- 头部搜索及轮播区 -->
+    <view class="weui-search-bar__box" style="border: 1px solid red">
+      <icon class="weui-icon-search_in-box" type="search" size="18"></icon>
+      <input type="text" class="weui-search-bar__input" placeholder="请输入片名、主演或导演" bindinput="bindKeyInput" />
+    </view>
+    <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" mode="aspectFill" class="slide-image" />
+          <view class="image_info">
+            <text>更新至11集</text>
+          </view>
+          <text class="image_title">【创造101】22人离开王嘉尔神配合</text>
+        </swiper-item>
+      </block>
+    </swiper>
+  <!-- 内容取板块 -->
+    <view class="section">
+      <view class="section_title">不负好时光，定制101会员卡额外加121赞</view>
+      <view class="section_videos">
+        <block wx:for="1234">
+            <view class="video">
+          <image mode="aspectFill" src="../../assets/post/post1.png"></image>
+          <view class="detail_info">aaa</view>
+          <view class="video_detail">
+            <text class="video_title">归去来、追剧吧</text>
+            <text class="video_content smallFont">罗晋强吻唐嫣被扇耳光？</text>
+          </view>
+        </view>
+        </block>
+      </view>
+    </view>
 </view>
