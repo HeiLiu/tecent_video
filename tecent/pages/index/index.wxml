@@ -35,9 +35,34 @@
         </view>
         </block>
         <view class="line"></view>
-        <view class="section_ft">
+        <view class="section_ft" bindtap="refreshTap">
           <image class="refresh" src="../../assets/icon/refresh.png"></image>
-          <text class="refresh_info">换一批试试</text>
+          <text class="refresh_info smallFont">换一批试试</text>
+        </view>
+      </view>
+    </view>
+    <view class="section">
+      <view class="section_title">不负.定制101会员卡额外加121赞</view>
+      <view class="section_poster">
+        <image class="poster_img" src="../../assets/post/post1.png"></image>
+        <view class="poster_detail">更新至20集</view>
+        <text class="poster_title">结爱[会员抢先看]</text>
+      </view>
+      <view class="section_videos">
+        <block wx:for="1234">
+            <view class="video">
+          <image mode="aspectFill" src="../../assets/post/post1.png"></image>
+          <view class="detail_info">aaa</view>
+          <view class="video_detail">
+            <text class="video_title">归去来、追剧吧</text>
+            <text class="video_content smallFont">罗晋强吻唐嫣被扇耳光？</text>
+          </view>
+        </view>
+        </block>
+        <view class="line"></view>
+        <view class="section_ft" bindtap="refreshTap">
+          <image class="refresh" src="../../assets/icon/refresh.png"></image>
+          <text class="refresh_info smallFont">换一批试试</text>
         </view>
       </view>
     </view>

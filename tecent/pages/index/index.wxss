@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   overflow-x: hidden;
-  padding: 0 20rpx;
+  padding: 0 30rpx;
 }
 .swiper{
   margin-top: 40rpx;
@@ -47,17 +47,34 @@
   justify-content: center;
   /* margin: 10rpx 20rpx; */
   overflow: hidden;
+  padding-bottom: 20rpx;
 }
 .section .section_title{
   padding: 20rpx 0 20rpx 20rpx;
   /* text-align: left; */
   font-weight: bold;
 }
+.section_ft{
+  width: 100%;
+  padding-top: 10rpx;
+  text-align: center;
+}
+.refresh{
+  width: 32rpx;
+  height: 32rpx;
+  vertical-align: middle;
+}
+.line{
+  height: 1px;
+  width: 100%;
+  background-color: rgba(204, 204, 204, .3);
+}
 .section_poster{
   width: 100%;
   box-sizing: border-box;
   overflow: hidden;
-  background:yellowgreen;
+  /* background:yellowgreen; */
+  position: relative;
 }
 .section_poster .poster_img{
   /* display: block; */
@@ -66,20 +83,28 @@
   /* padding: 20rpx; */
 }
 .section_poster .poster_detail{
-
+  background: red;
+  position: absolute;
+  right: 12rpx;
+  bottom: 112rpx;
+  width: auto;
+  height:30rpx;
+  line-height: 30rpx;
+  font-size: 24rpx;
 }
 .section_poster .poster-title{
-
+  font-size: 32rpx;
 }
 .section_videos{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 .video{
   box-sizing: border-box;
-  width:347rpx;
-  margin: 10rpx 5rpx;
+  width:338rpx;
+  margin: 10rpx 0rpx;
   overflow: hidden;
   position: relative;
 }
