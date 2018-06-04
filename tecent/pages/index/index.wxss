@@ -5,12 +5,13 @@
   flex-direction: column;
   justify-content: center;
   overflow-x: hidden;
+  padding: 0 20rpx;
 }
 .swiper{
   margin-top: 40rpx;
   box-sizing: border-box;
   width: 100%;
-  height: 470rpx;
+  height: 500rpx;
   background: #F4F6F8;
   
 }
@@ -19,15 +20,13 @@
   box-sizing: border-box;
   /* background: red; */
   display: block;
-  padding:0 20rpx 20rpx;
+  /* padding:0 20rpx 20rpx; */
   width: 100%;
   height:400rpx;
 }
 .swiper .image_title{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 20rpx;
+  display: block;
+  padding: 20rpx 0;
 }
 .swiper .image_info{
   font-size: 24rpx;
@@ -35,8 +34,8 @@
   height: 32rpx;
   line-height: 32rpx;
   position: absolute;
-  bottom: 105rpx;
-  right: 40rpx;
+  bottom: 115rpx;
+  right: 10rpx;
   background-color:red;
 }
 .section{
@@ -46,13 +45,31 @@
   flex-direction: column;
   /* align-items: center; */
   justify-content: center;
-  margin: 10rpx 20rpx;
+  /* margin: 10rpx 20rpx; */
   overflow: hidden;
 }
 .section .section_title{
-  padding: 20rpx 0;
+  padding: 20rpx 0 20rpx 20rpx;
   /* text-align: left; */
   font-weight: bold;
+}
+.section_poster{
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  background:yellowgreen;
+}
+.section_poster .poster_img{
+  /* display: block; */
+  width: 100%;
+  height: 400rpx;
+  /* padding: 20rpx; */
+}
+.section_poster .poster_detail{
+
+}
+.section_poster .poster-title{
+
 }
 .section_videos{
   display: flex;
@@ -61,11 +78,14 @@
 }
 .video{
   box-sizing: border-box;
-  width:45%;
-  margin: 10rpx;
+  width:347rpx;
+  margin: 10rpx 5rpx;
   overflow: hidden;
   position: relative;
 }
+/* .video+.video{
+  margin-left: 20rpx;
+} */
 .video image{
   height: 200rpx;
 }
