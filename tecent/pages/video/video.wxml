@@ -1,2 +1,25 @@
-<!--pages/video/video.wxml-->
-<text>pages/video/video.wxml</text>
+<!--pages/category/category.wxml-->
+<view class="container">
+    <scroll-view scroll-x scroll-with-animation="true" class="category_top">
+        <view wx:for="{{category}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-index="{{index}}" bindtap="switchCategory" class="cate_list {{curIndex===index?'on':''}}">
+            <text>{{item.name}}</text>
+        </view>
+        <view class="line"></view>
+    </scroll-view>
+    <scroll-view class="category_bottom" scroll-x scroll-into-view="{{toView}}" scroll-with-animation="true">
+        <view class="section" wx:for="123">
+            <view class="section_title">杨玉环 ></view>
+            <view class="section_videos">
+                <block wx:for="1234">
+                    <view class="video">
+                        <image src="../../assets/post/post1.png"></image>
+                        <view class="video_detail">
+                            <text class="video_title">王者荣耀：三大强势中单惨遭削弱！最后一个已成样箱底的。</text>
+                        </view>
+                    </view>
+                </block>
+            </view>
+            <view class="line"></view>
+        </view>
+    </scroll-view>
+</view>
