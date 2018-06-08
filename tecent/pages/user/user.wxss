@@ -1,6 +1,6 @@
 /* pages/user/user.wxss */
 
-.container {
+.userPage {
     height: 100vh;
     display: flex;
     flex-direction: column;

@@ -1,8 +1,8 @@
 <!--pages/user/user.wxml-->
 
-<view class="container">
+<view class="userPage">
     <view class="userInfo">
-            <open-data class="avatar" type="userAvatarUrl" bindtap="changeTap"></open-data>
+        <open-data class="avatar" type="userAvatarUrl" bindtap="changeTap"></open-data>
         <open-data lang="zh_CN" type="userNickName" class="fblod"></open-data>
     </view>
     <view class="weui-cells__title"></view>

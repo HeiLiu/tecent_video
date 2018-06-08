@@ -1,12 +1,4 @@
-.container{
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow-x: hidden;
-  padding: 0 30rpx;
-}
+
 .swiper{
   margin-top: 40rpx;
   box-sizing: border-box;
@@ -25,6 +17,7 @@
   height:400rpx;
 }
 .swiper .image_title{
+  font-size: 30rpx;
   display: block;
   padding: 20rpx 0;
 }
@@ -86,7 +79,7 @@
   background: red;
   position: absolute;
   right: 12rpx;
-  bottom: 112rpx;
+  bottom: 100rpx;
   width: auto;
   height:30rpx;
   line-height: 30rpx;

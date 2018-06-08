@@ -1,2 +1,122 @@
-<!--pages/channel/channel.wxml-->
-<text>pages/channel/channel.wxml</text>
+<view class="container">
+    <view class="tab">
+        <view class="weui-navbar nav">
+            <block wx:for="{{tabs}}" wx:key="*this">
+                <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'on' : ''}}" bindtap="tabClick">
+                    <view class="weui-navbar__title">{{item}}</view>
+                </view>
+            </block>
+            <!-- <view class="weui-navbar__slider" style="width:20rpx;left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view> -->
+            <view class="search">
+                <image class="searchImg" src="../../assets/icon/search.png"></image>
+            </view>
+        </view>
+        <view class="weui-tab__panel">
+            <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                <view class="line"></view>
+                <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+                    <block wx:for="{{imgUrls}}">
+                        <swiper-item>
+                            <image src="{{item}}" mode="aspectFill" class="slide-image" />
+                            <view class="image_info">
+                                <text>更新至11集</text>
+                            </view>
+                            <text class="image_title">【创造101】22人离开王嘉尔神配合</text>
+                        </swiper-item>
+                    </block>
+                </swiper>
+                <!-- 内容取板块 -->
+                <view class="section">
+                    <view class="section_title">不负.定制101会员卡额外加121赞</view>
+                    <view class="section_poster">
+                        <image class="poster_img" src="../../assets/post/post1.png"></image>
+                        <view class="poster_detail">更新至20集</view>
+                        <text class="poster_title">结爱[会员抢先看]</text>
+                    </view>
+                    <view class="section_videos">
+                        <block wx:for="1234">
+                            <view class="video">
+                                <image mode="aspectFill" src="../../assets/post/post1.png"></image>
+                                <view class="detail_info">aaa</view>
+                                <view class="video_detail">
+                                    <text class="video_title">归去来、追剧吧</text>
+                                    <text class="video_content smallFont">罗晋强吻唐嫣被扇耳光？</text>
+                                </view>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                <view class="line"></view>
+                <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+                    <block wx:for="{{imgUrls}}">
+                        <swiper-item>
+                            <image src="{{item}}" mode="aspectFill" class="slide-image" />
+                            <view class="image_info">
+                                <text>更新至11集</text>
+                            </view>
+                            <text class="image_title">【奔跑吧2更新】吕子乔土味情话撩💓baby</text>
+                        </swiper-item>
+                    </block>
+                </swiper>
+                <!-- 内容取板块 -->
+                <view class="section">
+                    <view class="section_title">不负.定制101会员卡额外加121赞</view>
+                    <view class="section_poster">
+                        <image class="poster_img" src="../../assets/post/post1.png"></image>
+                        <view class="poster_detail">更新至20集</view>
+                        <text class="poster_title">结爱[会员抢先看]</text>
+                    </view>
+                    <view class="section_videos">
+                        <block wx:for="1234">
+                            <view class="video">
+                                <image mode="aspectFill" src="../../assets/post/post1.png"></image>
+                                <view class="detail_info">aaa</view>
+                                <view class="video_detail">
+                                    <text class="video_title">归去来、追剧吧</text>
+                                    <text class="video_content smallFont">罗晋强吻唐嫣被扇耳光？</text>
+                                </view>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                <view class="line"></view>
+                <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+                    <block wx:for="{{imgUrls}}">
+                        <swiper-item>
+                            <image src="{{item}}" mode="aspectFill" class="slide-image" />
+                            <view class="image_info">
+                                <text>更新至11集</text>
+                            </view>
+                            <text class="image_title">【创造101】22人离开王嘉尔神配合</text>
+                        </swiper-item>
+                    </block>
+                </swiper>
+                <!-- 内容取板块 -->
+                <view class="section">
+                    <view class="section_title">不负.定制101会员卡额外加121赞</view>
+                    <view class="section_poster">
+                        <image class="poster_img" src="../../assets/post/post1.png"></image>
+                        <view class="poster_detail">更新至20集</view>
+                        <text class="poster_title">结爱[会员抢先看]</text>
+                    </view>
+                    <view class="section_videos">
+                        <block wx:for="1234">
+                            <view class="video">
+                                <image mode="aspectFill" src="../../assets/post/post1.png"></image>
+                                <view class="detail_info">aaa</view>
+                                <view class="video_detail">
+                                    <text class="video_title">归去来、追剧吧</text>
+                                    <text class="video_content smallFont">罗晋强吻唐嫣被扇耳光？</text>
+                                </view>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
