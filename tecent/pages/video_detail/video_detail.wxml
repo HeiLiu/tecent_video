@@ -1,7 +1,23 @@
 <!--pages/video_detail/video_detail.wxml-->
 <view class="section tc">
-  <video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+  <video id="myVideo" src="{{playInfo.url}}"
     danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
-    <view class="titie"><text>今日必吃的瓜6.7</text></view>
-    <view class="number"><text>7.4分</text>·<text>独播</text>·<text>都市</text>·<text>13.3万</text></view>
+    <view class="weui-cell rmTopLine">
+        <view class="weui-cell__bd video_title">{{playInfo.title}}</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access midFont"> 简介 </view>
+    </view>
+    <view class="weui-cell video_detail rmTopLine">
+        <view class="weui-cell__bd video_detail"><text>7.4分 </text>·<text style="color: orange;"> 独播 </text>·<text> 都市 </text>·<text> 13.3万 </text></view>
+    </view>
+    <view class="operation">
+      <view class="clarity">高清
+        <image class="arrow" src="../../assets/icon/arrow.png"></image>
+      </view>
+      <image class="share" src="../../assets/icon/share.png"></image>
+      <image class="heart" src="../../assets/icon/heart.png"></image>
+    </view>
+    <view class="weui-cell zhuanji">
+        <view class="weui-cell__bd ">专辑列表</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access midFont"> 5 </view>
+    </view>
 </view>

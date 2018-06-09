@@ -47,9 +47,10 @@ Page({
         }
       ],
       curIndex: 0,
-      detail:[
-  
-      ],
+      detail:[{
+        title:'杨玉环',
+        
+      }],
       toView:'guowei'
     },
     switchCategory(e) {

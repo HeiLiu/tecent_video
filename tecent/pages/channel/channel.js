@@ -7,7 +7,7 @@ Page({
         sliderOffset: 0,
         sliderLeft: 0,
         imgUrls: [
-            'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+            'https://puui.qpic.cn/vcover_vt_pic/0/3enwc74hj562xjd1508914052/260',
             'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
             'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg',
             '../../assets/post/post1.png'

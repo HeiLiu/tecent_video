@@ -8,5 +8,6 @@ App({
 
   },
   globalData: {
+    playInfo:{}
   }
 })
