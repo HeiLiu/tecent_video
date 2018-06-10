@@ -8,7 +8,7 @@ function getRandomColor() {
   }
   return '#' + rgb.join('')
 }
-// https://apd-ffd5b6848ea656ba3ea922752cd01391.v.smtcdns.com/om.tc.qq.com/Agq27Cu5Cdcb_jfUErgPjlPnvIoWC3vu1SCv_RFve4LE/z0526d79uwx.mp4?sdtfrom=v3010&guid=cc6ae43868f6f4e15c3c7d7525007d0e&vkey=752CB230096D4A277CE70097103A3C00BAA8732658B77DB407026A1FF30227E629E52172E0FB0B48BCC31401CD600C3FB26166A27E6091258A5D92F4D2951A9B1BB8955F5299723619CDFF3AA3CE9C21C43D7C5B1D73BDA7E5377424C5E1A08988CED9F915EA28E05E0DD0FC93868B98B284AFBCA8FDC786&platform=3
+//http://p9utic4op.bkt.clouddn.com/m0512xthau4.mp4
 Page({
   onReady: function (res) {
     this.videoContext = wx.createVideoContext('myVideo')
@@ -70,7 +70,68 @@ Page({
     // console.log(playUrl);
     this.setData({
       playInfo
-    })
+    });
+    if(this.data.playInfo.title == '奔跑吧2携手爱情公寓'){
+      let danmuList = this.data.danmuList;
+      danmuList =[{
+        text: '我第一~~',
+        color: '#ff0000',
+        time: 1
+      },
+      {
+        text: '承包空屏',
+        color: '#ff00ff',
+        time: 3
+      },{
+        text: '来啦来啦',
+        color: '#ff00ff',
+        time: 4
+      },{
+        text: '香烟瓜子啤酒矿泉水~让一让',
+        color: '#ff00ff',
+        time: 6
+      },{
+        text: '✌前排小板凳,终于有一期好看的啦',
+        color: '#ff00ff',
+        time: 7
+      },
+      {
+        text: 'VIP✌',
+        color: '#ff00ff',
+        time: 15
+      }, {
+        text: '跑男强行续命',
+        color: '#ff0c00',
+        time: 24
+      },
+      {
+        text: '前面那个放学别走',
+        color: '#ff00ff',
+        time: 27
+      }, {
+        text: '爱情公寓终于要来啦',
+        color: '#ff00ff',
+        time: 28
+      }, {
+        text: '啦啦啦~德玛西亚',
+        color: '#ff0c00',
+        time: 39
+      },
+      {
+        text: '8.10一起去看电影呀',
+        color: '#ff00ff',
+        time: 35
+      },
+      {
+        text: '老子天下第一最牛批',
+        color: '#ff00ff',
+        time: 35
+      },
+    ];
+    this.setData({
+      danmuList
+    })    
+    }
   },
   bindInputBlur: function (e) {
     this.inputValue = e.detail.value

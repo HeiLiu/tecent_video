@@ -7,14 +7,14 @@
         <view class="line"></view>
     </scroll-view>
     <scroll-view class="category_bottom" scroll-x scroll-into-view="{{toView}}" scroll-with-animation="true">
-        <view class="section" wx:for="123">
-            <view class="section_title">杨玉环 ></view>
+        <view class="section" wx:for="{{sections}}">
+            <view class="section_title">{{item.title}} ></view>
             <view class="section_videos">
-                <block wx:for="1234">
-                    <view class="video">
-                        <image src="../../assets/post/post1.png"></image>
+                <block  wx:for="{{item.videos}}" wx:for-item="video">
+                    <view class="video" bindtap="playTap">
+                        <image src="{{video.imgUrl}}"></image>
                         <view class="video_detail">
-                            <text class="video_title">王者荣耀：三大强势中单惨遭削弱！最后一个已成样箱底的。</text>
+                            <text class="video_title">{{video.detail}}</text>
                         </view>
                     </view>
                 </block>

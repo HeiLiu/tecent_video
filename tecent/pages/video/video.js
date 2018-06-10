@@ -1,4 +1,5 @@
 // pages/categories/categories.js
+const app = getApp()
 Page({
 
     /**
@@ -47,11 +48,37 @@ Page({
         }
       ],
       curIndex: 0,
-      detail:[{
-        title:'杨玉环',
-        
-      }],
-      toView:'guowei'
+      sections:[{
+      title:'杨玉环',
+      videos:[{
+        imgUrl:'http://puui.qpic.cn/vpic/0/v0554n8npkx_160_90_3.jpg/0',
+        detail:'杨玉环史诗级精品教学教你如何打出爆发流伤害！'
+      },{
+        imgUrl:'http://puui.qpic.cn/vpic/0/n0552sf7ow6_160_90_3.jpg/0',
+        detail:'大熊王者荣耀：杨玉环实战视频伤害惊人'
+      },{
+        imgUrl:'http://puui.qpic.cn/vpic/0/b05535ead7a_160_90_3.jpg/0',
+        detail:'王者荣耀 杨玉环全场疯狂输出54% 输出局'
+      },{
+        imgUrl:'http://puui.qpic.cn/vpic/0/h0662qybzhp_160_90_3.jpg/0',
+        detail:'王者荣耀 杨玉环超实用实战打法解析，学会它上星耀不是梦'
+      }]  
+    },{
+      title:'德古拉解说',
+      videos:[{
+        imgUrl:'http://puui.qpic.cn/vpic/0/t0676avi3ma_160_90_3.jpg/0',
+        detail:'新马可波罗18杀四连超凡了解一下,秒天秒地秒空气'
+      },{
+        imgUrl:'http://puui.qpic.cn/vpic/0/h0668sikfj2_160_90_3.jpg/0',
+        detail:'新英雄元歌8技能打开你的脑洞'
+      },{
+        imgUrl:'http://puui.qpic.cn/vpic/0/o06784dg4gv_160_90_3.jpg/0',
+        detail:'公孙离四连超凡天秀无极限'
+      },{
+        imgUrl:'http://puui.qpic.cn/vpic/0/r0658rxy89j_160_90_3.jpg/0',
+        detail:'花木兰通天边路暴捶宫本三杀定乾坤'
+      }]  
+    }],
     },
     switchCategory(e) {
       var index = e.currentTarget.dataset.index;
@@ -60,11 +87,21 @@ Page({
         curIndex: index ? index : 0
       })
     },
+    playTap(){
+      // http://p9utic4op.bkt.clouddn.com/v0554n8npkx.p712.1.mp4
+      app.globalData.playInfo = {
+        url: "http://p9utic4op.bkt.clouddn.com/v0554n8npkx.p712.1.mp4",
+        title: '杨玉环史诗级精品教学教你如何打出爆发流伤害！'
+    }
+    wx.navigateTo({
+        url: '/pages/video_detail/video_detail'
+    })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-  
+      console.log(this.data.sections)
     },
   
     /**

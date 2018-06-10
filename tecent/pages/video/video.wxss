@@ -58,6 +58,7 @@
   padding-bottom: 30rpx;
 }
 .video{
+  display: inline-block;
   box-sizing: border-box;
   width:338rpx;
   margin: 10rpx 0rpx;

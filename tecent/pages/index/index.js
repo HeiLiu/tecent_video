@@ -69,8 +69,8 @@ Page({
   },
   playTap() {
     app.globalData.playInfo = {
-      url: "https://lmbsy.qq.com/a0026za7i3o.mp4?sdtfrom=v3010&guid=cc6ae43868f6f4e15c3c7d7525007d0e&vkey=09F15E0592D8054273B04E20864B5D59CC8E7E2FE16D015A0F4E8D1FF681C0F385F2A08DEFD9029D01198EC61B7B4128BE28D2806CB6CDBD51E6C3FBF31A1DE0625B2AC33D925BA1316F5D65CD4BF648BA228F0152CD186EBD1B6506A0100CDED6716CB4DC624514ACB0D529608D5B954A6CC7D575A48344&platform=2",
-      title: '奔跑吧2'
+      url: "http://p9utic4op.bkt.clouddn.com/o0026omczct%20%282%29.mp4",
+      title: '奔跑吧2携手爱情公寓'
     }
     wx.navigateTo({
       url: '/pages/video_detail/video_detail'

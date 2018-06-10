@@ -14,7 +14,7 @@
             <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
                 <view class="line"></view>
                 <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-                    <block wx:for="{{imgUrls}}">
+                    <block wx:for="{{imgUrls0}}">
                         <swiper-item>
                             <image src="{{item}}" mode="aspectFill" class="slide-image" />
                             <view class="image_info">
@@ -25,94 +25,74 @@
                     </block>
                 </swiper>
                 <!-- 内容取板块 -->
-                <view class="section">
-                    <view class="section_title">不负.定制101会员卡额外加121赞</view>
-                    <view class="section_poster">
-                        <image class="poster_img" src="../../assets/post/post1.png"></image>
-                        <view class="poster_detail">更新至20集</view>
-                        <text class="poster_title">结爱[会员抢先看]</text>
+                <view class="section" wx:for="{{sections0}}" wx:key="{{index}}">
+                    <view class="section_title">{{item.section_title}}</view>
+                    <view class="section_poster" wx:if="{{item.posterImgUrl}}">
+                        <image class="poster_img" src="{{item.posterImgUrl}}"></image>
+                        <view class="poster_detail">{{item.posterDetail}}</view>
+                        <text class="poster_title">{{item.posterTitle}}</text>
                     </view>
                     <view class="section_videos">
-                        <block wx:for="1234">
-                            <view class="video">
-                                <image mode="aspectFill" src="../../assets/post/post1.png"></image>
-                                <view class="detail_info">aaa</view>
+                        <block wx:for="{{item.videos}}" wx:key="{{index}}" wx:for-item="videos">
+                            <view class="video" bindtap="playTap">
+                                <image mode="aspectFill" src="{{videos.imgUrl}}"></image>
+                                <view class="detail_info">{{videos.videoInfo}}</view>
                                 <view class="video_detail">
-                                    <text class="video_title">归去来、追剧吧</text>
-                                    <text class="video_content smallFont">罗晋强吻唐嫣被扇耳光？</text>
+                                    <text class="video_title">{{videos.videoTitle}}</text>
+                                    <text class="video_content smallFont">{{videos.videoContent}}</text>
                                 </view>
                             </view>
                         </block>
                     </view>
                 </view>
-                <view class="section">
-                        <view class="section_title">不负.定制101会员卡额外加121赞</view>
-                        <view class="section_poster" wx:if="{{false}}">
-                            <image class="poster_img" src="../../assets/post/post1.png"></image>
-                            <view class="poster_detail">更新至20集</view>
-                            <text class="poster_title">结爱[会员抢先看]</text>
-                        </view>
-                        <view class="section_videos">
-                            <block wx:for="1234">
-                                <view class="video">
-                                    <image mode="aspectFill" src="../../assets/post/post1.png"></image>
-                                    <view class="detail_info">aaa</view>
-                                    <view class="video_detail">
-                                        <text class="video_title">归去来、追剧吧</text>
-                                        <text class="video_content smallFont">罗晋强吻唐嫣被扇耳光？</text>
-                                    </view>
-                                </view>
-                            </block>
-                        </view>
-                    </view>
             </view>
             <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
                 <!-- 综艺 -->
                 <view class="line"></view>
                 <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-                    <block wx:for="{{imgUrls}}">
+                    <block wx:for="{{imgUrls1}}">
                         <swiper-item>
                             <image src="{{item}}" mode="aspectFill" class="slide-image" />
                             <view class="image_info">
-                                <text>更新至11集</text>
+                                <text>06-08</text>
                             </view>
                             <text class="image_title">【奔跑吧2更新】吕子乔土味情话撩💓baby</text>
                         </swiper-item>
                     </block>
                 </swiper>
                 <!-- 内容取板块 -->
-                <view class="section">
-                    <view class="section_title">不负.定制101会员卡额外加121赞</view>
-                    <view class="section_poster">
-                        <image class="poster_img" src="../../assets/post/post1.png"></image>
-                        <view class="poster_detail">更新至20集</view>
-                        <text class="poster_title">结爱[会员抢先看]</text>
+                <view class="section" wx:for="{{sections1}}" wx:key="{{index}}">
+                    <view class="section_title">{{item.section_title}}</view>
+                    <view class="section_poster" wx:if="{{item.posterImgUrl}}">
+                        <image class="poster_img" src="{{item.posterImgUrl}}"></image>
+                        <view class="poster_detail">{{item.posterDetail}}</view>
+                        <text class="poster_title">{{item.posterTitle}}</text>
                     </view>
                     <view class="section_videos">
-                        <block wx:for="1234">
-                            <view class="video">
-                                <image mode="aspectFill" src="../../assets/post/post1.png"></image>
-                                <view class="detail_info">aaa</view>
+                        <block wx:for="{{item.videos}}" wx:key="{{index}}" wx:for-item="videos">
+                            <view class="video" bindtap="playTap">
+                                <image mode="aspectFill" src="{{videos.imgUrl}}"></image>
+                                <view class="detail_info">{{videos.videoInfo}}</view>
                                 <view class="video_detail">
-                                    <text class="video_title">归去来、追剧吧</text>
-                                    <text class="video_content smallFont">罗晋强吻唐嫣被扇耳光？</text>
+                                    <text class="video_title">{{videos.videoTitle}}</text>
+                                    <text class="video_content smallFont">{{videos.videoContent}}</text>
                                 </view>
                             </view>
                         </block>
                     </view>
                 </view>
-                
+
             </view>
             <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
                 <view class="line"></view>
                 <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-                    <block wx:for="{{imgUrls}}">
+                    <block wx:for="{{imgUrls2}}">
                         <swiper-item>
                             <image src="{{item}}" mode="aspectFill" class="slide-image" />
                             <view class="image_info">
-                                <text>更新至11集</text>
+                                <text>8.7</text>
                             </view>
-                            <text class="image_title">【创造101】22人离开王嘉尔神配合</text>
+                            <text class="image_title"> 湮灭·【全网首播】探秘丛林险区 </text>
                         </swiper-item>
                     </block>
                 </swiper>
@@ -141,32 +121,32 @@
             <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
                 <view class="line"></view>
                 <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-                    <block wx:for="{{imgUrls}}">
+                    <block wx:for="{{imgUrls3}}">
                         <swiper-item>
                             <image src="{{item}}" mode="aspectFill" class="slide-image" />
                             <view class="image_info">
-                                <text>更新至11集</text>
+                                <text>更新至108集</text>
                             </view>
-                            <text class="image_title">【创造101】22人离开王嘉尔神配合</text>
+                            <text class="image_title"> 【轻松笑】给你的生活来点料</text>
                         </swiper-item>
                     </block>
                 </swiper>
                 <!-- 内容取板块 -->
-                <view class="section">
-                    <view class="section_title">不负.定制101会员卡额外加121赞</view>
-                    <view class="section_poster">
-                        <image class="poster_img" src="../../assets/post/post1.png"></image>
-                        <view class="poster_detail">更新至20集</view>
-                        <text class="poster_title">结爱[会员抢先看]</text>
+                <view class="section" wx:for="{{sections3}}" wx:key="{{index}}">
+                    <view class="section_title">{{item.section_title}}</view>
+                    <view class="section_poster" wx:if="{{item.posterImgUrl}}">
+                        <image mode="aspectFill" class="poster_img" src="{{item.posterImgUrl}}"></image>
+                        <view class="poster_detail">{{item.posterDetail}}</view>
+                        <text class="poster_title">{{item.posterTitle}}</text>
                     </view>
                     <view class="section_videos">
-                        <block wx:for="1234">
-                            <view class="video">
-                                <image mode="aspectFill" src="../../assets/post/post1.png"></image>
-                                <view class="detail_info">aaa</view>
+                        <block wx:for="{{item.videos}}" wx:key="{{index}}" wx:for-item="videos">
+                            <view class="video" bindtap="playTap3">
+                                <image mode="aspectFill" src="{{videos.imgUrl}}"></image>
+                                <view class="detail_info">{{videos.videoInfo}}</view>
                                 <view class="video_detail">
-                                    <text class="video_title">归去来、追剧吧</text>
-                                    <text class="video_content smallFont">罗晋强吻唐嫣被扇耳光？</text>
+                                    <text class="video_title">{{videos.videoTitle}}</text>
+                                    <text class="video_content smallFont">{{videos.videoContent}}</text>
                                 </view>
                             </view>
                         </block>
