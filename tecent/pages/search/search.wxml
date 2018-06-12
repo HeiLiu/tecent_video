@@ -1,22 +1,39 @@
-<view class="weui-search-bar">  
-    <view class="weui-search-bar__form">  
-        <view class="weui-search-bar__box">  
-            <icon class="weui-icon-search_in-box" type="search" size="14"></icon>  
-            <input type="text" class="weui-search-bar__input" placeholder="请输入片名、主演或导演" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="bindKeyInput"/>  
-            <view class="weui-icon-clear"  bindtap="clearInput">  
-                <icon type="clear" size="14"></icon>  
-            </view>  
-        </view>  
-        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">  
-            <icon class="weui-icon-search" type="search" size="14"></icon>  
-            <view class="weui-search-bar__text" bindtap="">搜索</view>  
-        </label>  
-    </view>  
-    <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="addItem">搜索</view>  
-</view>  
-<view hidden="{{histroyShowed}}">  
-    <view  class="search-log" wx:for="12">  
-        <text style="font-size:14px;font-family:microsoft yahei">123</text>
-        <icon type="clear"  class="inline" bindtap="deleteItem" data-key="{{item.key}}" size="14"></icon>
-    </view>      
-</view> 
+<view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+            <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+            <input type="text" class="weui-search-bar__input" placeholder="请输入片名、主演或导演" value="{{inputVal}}" focus="{{inputShowed}}"
+                bindinput="bindKeyInput" />
+            <view class="weui-icon-clear" bindtap="clearInput">
+                <icon type="clear" size="14"></icon>
+            </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+            <icon class="weui-icon-search" type="search" size="14"></icon>
+            <view class="weui-search-bar__text" bindtap="">搜索</view>
+        </label>
+    </view>
+    <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="searchTap">搜索</view>
+</view>
+
+<view hidden="{{!histroyShowed}}">
+    <text class="msg">历史搜索</text>
+    <view class="search-log">
+        <block wx:for="{{histories}}">
+
+            <text class="his_item">{{item}}</text>
+        </block>
+    </view>
+</view>
+<view class="hotItem">
+    <text class="msg">热门搜索</text>
+    <block wx:for="12">
+        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+                <view class="square range">1</view>
+            </view>
+            <view class="weui-cell__bd">奔跑吧 第2季</view>
+            <view class="weui-cell__ft ">⬆</view>
+        </navigator>
+    </block>
+</view>

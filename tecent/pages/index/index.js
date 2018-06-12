@@ -12,7 +12,7 @@ Page({
     indicatorDots: false,
     autoplay: true,
     interval: 5000,
-    duration: 1000,
+    duration: 1000,  
     sections: [{
       section_title: '创造101 人气学长助阵公演',
       posterImgUrl: 'http://puui.qpic.cn/tv/0/25725891_1080607/0',

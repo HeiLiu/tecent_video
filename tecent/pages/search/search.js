@@ -1,7 +1,9 @@
 Page({
   data: {
       inputShowed: false,
-      inputVal: "adsfsf"
+      histroyShowed:false,
+      inputVal: "",
+      histories:[],
   },
   showInput: function () {
       this.setData({
@@ -12,7 +14,7 @@ Page({
       this.setData({
           inputVal: "",
           inputShowed: false
-      });
+      });   
   },
   clearInput: function () {
       this.setData({
@@ -23,5 +25,22 @@ Page({
       this.setData({
           inputVal: e.detail.value
       });
+     
+  },
+  bindKeyInput(e){
+    this.setData({
+        inputVal: e.detail.value
+    });
+    console.log(this.data.inputVal);
+  },
+  searchTap(e){
+      const input = this.data.inputVal;
+      const histories = this.data.histories;
+      histories.push(input);
+    this.setData({
+        histroyShowed:true,
+        histories
+    });
+    console.log(`lishi${histories}`);
   }
 });

@@ -6,7 +6,40 @@
 .searchbar-result:before {
     display: none;
 }
-
-.weui-cell {
-    padding: 12px 15px 12px 35px;
+.msg{
+    font-size: 28rpx;
+    color: #c5c2c2;
+    padding: 30rpx;
+}
+.search-log{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    /* justify-content: space-around; */
+}
+.his_item{
+    display: inline-block;
+    width: 45%;
+    height: 40rpx;
+    line-height: 40rpx;
+    border-radius: 8rpx;
+    padding: 5rpx;
+    margin: 10rpx 10rpx;
+    background: #ece8e8;
+    font-size: 30rpx;
+    text-align: center;
+   font-family:microsoft yahei;
+}
+.square{
+    display:inline-block;
+    width: 40rpx;
+    height: 40rpx;
+    background: red;
+    line-height: 40rpx;
+    text-align: center;
+    box-sizing: border-box;
+    color: #fff;
+    margin: 20rpx;
+    border-radius: 4rpx;
 }
